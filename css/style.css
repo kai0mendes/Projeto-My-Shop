@@ -1,0 +1,441 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*resetando tudo*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    
+}
+:root {
+    --blue: #0FEAE3;
+    --roxo: #DB04A0;
+    --gray: #ededed;
+    --amarelo: #FAC60B;
+}
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url(/images/foto\ 2.jpg);
+    
+}
+header {
+    width: 100%;
+    height: 500px;
+    background: #cac786;
+    
+}
+.content { 
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+    
+}
+
+nav {
+    width: 100%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.brand {
+    font-size: 30px;
+    color: var(--roxo);
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: var(--roxo);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul button {
+    border: 1px solid var(--roxo);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left: 30px;
+    color: var(--roxo);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+nav ul button:hover {
+    transition: background, color 0.6s;
+    background: var(--roxo);
+    color: white;
+}
+
+.content .header-block {
+    max-width: 1000px;
+    min-width: 300px;
+    height: 450px;
+    background: var(--blue);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+}
+
+.header-block img {
+    width: 30%;
+    position: absolute;
+    right: 2%;
+    top: 20px;
+    
+    
+    
+}
+
+.header-block .text{
+    position: absolute;
+    bottom: 30%;
+    left: 17%;
+
+}
+.header-block .text h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: 0.5s;
+}
+
+.header-block .text p {
+    max-width: 280px;
+    color: #fff;
+    text-align: right;
+    transform: translateX(-20px);
+    transition:  0.4s;
+}
+
+/* parte de baixo */
+
+section .catalog {
+    width: 1000vw;
+    padding: 100px;
+}
+section .filter-card {
+    width: 980px;
+    height: 150px;
+    background-color: transparent;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(100px);
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    
+}
+.search-input {
+    width: 700px;
+    height: 50px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    text-indent: 10px;
+    background-color: transparent;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.search-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background: #cac786;
+    color: var(--roxo) ;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.2s ease;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.search-button:hover {
+    background: var(--roxo);
+    color: var(--gray);
+}
+.title-wrapper-catalog {
+    margin-top: 200px;
+    padding-bottom: 20px;
+}
+section .card-wrapper {
+    max-width: 1000px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 50px;
+    padding-top: 30px;
+}
+section .card-iten {
+    height: 530px;
+    background-color: transparent;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+}
+.card-content {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.card-iten img {
+    width: 60%;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+}
+.card-iten h4 {
+    width: 90%;
+}
+.card-iten p {
+    width: 90%;
+    font-style: italic;
+    color: #00000070;
+}
+.card-iten button {
+    width: 90%;
+    padding: 15px 0px;
+    border: none;
+    background: #cac786;
+    border-radius: 4px;
+    color:var(--roxo);
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+.card-iten button:hover {
+    background: var(--roxo);
+    color: var(--gray);
+}
+/*about*/
+.about {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+.about-content {
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: transparent;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    backdrop-filter: blur(5px);
+}
+
+.rigth {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+.rigth h3 {
+    text-align: right;
+    width: 90%;
+    margin-bottom: 20px;
+}
+.rigth p {
+    max-width: 90%;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.4);
+}
+.title-wrapper-about {
+    margin-bottom: 15px;
+}
+
+
+/*rodapé*/
+
+footer {
+    width: 100%;
+    height: 250px;
+}
+footer .main {
+    width: 100%;
+    height: 200px;
+    background: #cac786;
+    padding: 20px 10px;
+}
+.footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-social  {
+    color: var(--gray);
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4 {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.footer-links  {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+.main .footer-social img {
+    width: 30px;
+    height: 30px;
+    
+}
+footer .last {
+    width: 100%;
+    height: 50px;
+    background: var(--roxo);
+    color: white;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+/*estruturando para mobile*/
+
+@media (max-width: 576px) {
+    nav ul li{
+        display: none;
+    }
+    .header-block img {
+        width: 55%;
+        position: absolute;
+        right: 170px;
+        top: 50px;
+        
+    }
+    .header-block .text {
+        position: absolute;
+        bottom: 35%;
+        left: 200px;
+        
+    }
+    section .filter-card {
+        width: 390px;
+        padding: 0px 10px;
+    }
+     
+    .search-input {
+        max-width: 700px;
+        min-width: 240px;
+    }
+    .search-button {
+        max-width: 150px;
+        min-width: 80px;
+
+    }
+    .about {
+        margin-top: 100px;
+
+    }
+    .title-wrapper-about {
+        margin-bottom: 20px;
+    }
+    .about-content {
+        flex-direction: column;
+        height: 100%;
+
+    }
+    .left {
+        display: none;
+
+    }
+    .rigth {
+        width: 90%;
+    }
+    .rigth p {
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+    }
+    .feature {
+        height: 100%;
+
+    }
+    .feature-card-block {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        height: 100%;
+    }
+    footer .main {
+        height: 100%;
+    
+    }
+    .footer-links {
+        flex-direction: column;
+        padding-left: 10%;
+    }
+}
